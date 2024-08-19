@@ -1,13 +1,8 @@
 #include <iostream>
-#include <string_view>
 
 #include "util/files.h"
 #include "pe/pe.h"
-
-bool pdb_enabled;
-bool map_enabled;
-std::string pdb_path;
-std::string map_path;
+#include "globals.h"
 
 void print_help();
 
@@ -27,15 +22,15 @@ int main(const int argc, char* argv[]) {
 
         // PDB path
         if (arg_ == "-pdb") {
-            pdb_enabled = true;
-            pdb_path = argv[i+1]; // out of bounds ??
+            globals::pdb_enabled = true;
+            globals::pdb_path = argv[i+1]; // out of bounds ??
             continue;
         }
 
         // MAP path
         if (arg_ == "-map") {
-            map_enabled = true;
-            map_path = argv[i+1]; // out of bounds ??
+            globals::map_enabled = true;
+            globals::map_path = argv[i+1]; // out of bounds ??
             continue;
         }
     }

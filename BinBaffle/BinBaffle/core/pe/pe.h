@@ -6,6 +6,8 @@
 #include "../../external/zasm/base/mode.hpp"
 #include "../../external/linux_pe/nt/image.hpp"
 
+#include "../util/types.h"
+
 namespace pe {
 	/// Concept for raw images from linux-pe, could also probably check for `win::image_t`
 	template <typename Ty> concept raw_image_t = types::is_any_of_v<Ty, win::image_x86_t, win::image_x64_t>;
@@ -19,4 +21,7 @@ namespace pe {
 
 	template <raw_image_t Img>
 	bool isValid(Img* image);
+
+	template <raw_image_t Img>
+	bool isX64(const Img* image);
 }

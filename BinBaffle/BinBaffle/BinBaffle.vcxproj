@@ -155,8 +155,10 @@
     <ClCompile Include="core\pe\pe.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="core\globals.h" />
     <ClInclude Include="core\pe\pe.h" />
     <ClInclude Include="core\util\files.h" />
+    <ClInclude Include="core\util\types.h" />
     <ClInclude Include="external\linux_pe\coff\archive.hpp" />
     <ClInclude Include="external\linux_pe\coff\auxiliaries\aux_file_name.hpp" />
     <ClInclude Include="external\linux_pe\coff\auxiliaries\aux_function.hpp" />

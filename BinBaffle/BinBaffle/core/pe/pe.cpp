@@ -171,4 +171,9 @@ namespace pe {
 	bool isValid(Img* image) {
 		return image->dos_header.e_magic == win::DOS_HDR_MAGIC;
 	}
+
+	template <raw_image_t Img>
+	bool isX64(const Img* image) {
+		return image->get_nt_headers()->file_header.machine == win::machine_id::amd64;
+	}
 }
