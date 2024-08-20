@@ -3,6 +3,7 @@
 #include "util/files.h"
 #include "pe/pe.h"
 #include "globals.h"
+#include "obfuscator/obfuscator.h"
 
 void print_help();
 
@@ -48,10 +49,10 @@ int main(const int argc, char* argv[]) {
     }
 
     if (pe::isX64(img_x64)) {
-        obfuscate(img_x64);
+        obfuscator::obfuscate(img_x64);
     }
     else {
-        obfuscate(img_x86);
+        obfuscator::obfuscate(img_x86);
     }
     
     return 0;

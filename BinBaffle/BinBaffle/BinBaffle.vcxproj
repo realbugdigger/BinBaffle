@@ -152,12 +152,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="core\main.cpp" />
+    <ClCompile Include="core\obfuscator\func_parser\func_parser.cpp" />
+    <ClCompile Include="core\obfuscator\func_parser\pdb\pdb.cpp" />
+    <ClCompile Include="core\obfuscator\obfuscator.cpp" />
     <ClCompile Include="core\pe\pe.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\globals.h" />
+    <ClInclude Include="core\obfuscator\func_parser\common\common.h" />
+    <ClInclude Include="core\obfuscator\func_parser\func_parser.h" />
+    <ClInclude Include="core\obfuscator\func_parser\pdb\detail\parser_v7.h" />
+    <ClInclude Include="core\obfuscator\func_parser\pdb\detail\structs.h" />
+    <ClInclude Include="core\obfuscator\func_parser\pdb\pdb.h" />
+    <ClInclude Include="core\obfuscator\obfuscator.h" />
     <ClInclude Include="core\pe\pe.h" />
     <ClInclude Include="core\util\files.h" />
+    <ClInclude Include="core\util\memory\address.h" />
     <ClInclude Include="core\util\types.h" />
     <ClInclude Include="external\linux_pe\coff\archive.hpp" />
     <ClInclude Include="external\linux_pe\coff\auxiliaries\aux_file_name.hpp" />
