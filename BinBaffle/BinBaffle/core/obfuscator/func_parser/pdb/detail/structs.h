@@ -32,6 +32,9 @@ namespace func_parser::pdb::detail {
         uint32_t BlockMapAddr;
     };
 
+
+    //https://llvm.org/docs/PDB/DbiStream.html
+
     struct DBIHeader {
         int32_t VersionSignature;
         uint32_t VersionHeader;

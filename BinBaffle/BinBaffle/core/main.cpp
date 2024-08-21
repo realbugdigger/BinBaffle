@@ -49,10 +49,10 @@ int main(const int argc, char* argv[]) {
     }
 
     if (pe::isX64(img_x64)) {
-        obfuscator::obfuscate(img_x64);
+        obfuscator::binbaffle(img_x64);
     }
     else {
-        obfuscator::obfuscate(img_x86);
+        obfuscator::binbaffle(img_x86);
     }
     
     return 0;

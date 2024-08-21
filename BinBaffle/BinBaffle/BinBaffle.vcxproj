@@ -153,15 +153,19 @@
   <ItemGroup>
     <ClCompile Include="core\main.cpp" />
     <ClCompile Include="core\obfuscator\func_parser\func_parser.cpp" />
+    <ClCompile Include="core\obfuscator\func_parser\map\map.cpp" />
     <ClCompile Include="core\obfuscator\func_parser\pdb\pdb.cpp" />
     <ClCompile Include="core\obfuscator\obfuscator.cpp" />
     <ClCompile Include="core\pe\pe.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\globals.h" />
+    <ClInclude Include="core\obfuscator\func_parser\common\combiner.h" />
     <ClInclude Include="core\obfuscator\func_parser\common\common.h" />
     <ClInclude Include="core\obfuscator\func_parser\func_parser.h" />
+    <ClInclude Include="core\obfuscator\func_parser\map\map.h" />
     <ClInclude Include="core\obfuscator\func_parser\pdb\detail\parser_v7.h" />
+    <ClInclude Include="core\obfuscator\func_parser\pdb\detail\reader_v7.h" />
     <ClInclude Include="core\obfuscator\func_parser\pdb\detail\structs.h" />
     <ClInclude Include="core\obfuscator\func_parser\pdb\pdb.h" />
     <ClInclude Include="core\obfuscator\obfuscator.h" />

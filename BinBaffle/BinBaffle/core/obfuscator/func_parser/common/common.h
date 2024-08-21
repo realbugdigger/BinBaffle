@@ -14,7 +14,7 @@ namespace func_parser {
         std::uint64_t rva = 0;
         std::optional<std::size_t> size = std::nullopt;
 
-        // \note: @es3n1n: im not really sure how to properly merge stuff like
+        // im not really sure how to properly merge stuff like
         // names. technically there could be a different size of function in the
         // different sources, but I'll let the future me to decide on this
         void merge(const function_t& another) {
@@ -33,14 +33,3 @@ namespace func_parser {
 
     using function_list_t = std::vector<function_t>;
 }
-
-template <>
-struct std::formatter<func_parser::function_t> : std::formatter<std::string> {
-    template <class FormatContextTy>
-    constexpr auto format(const func_parser::function_t& inst, FormatContextTy& ctx) const {
-        return std::formatter<std::string>::format( //
-            std::format("valid[{}] name[{}] size[{}] rva[{:#x}]", inst.valid, inst.name,
-                inst.size.has_value() ? std::to_string(inst.size.value()) : "none", inst.rva),
-            ctx);
-    }
-};

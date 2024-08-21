@@ -5,7 +5,6 @@
 namespace func_parser::pdb {
     function_list_t discover_functions(const std::filesystem::path& pdb_path, const std::uint64_t) {
         // Return an empty set if file doesn't exist
-        //
         if (!exists(pdb_path)) {
             return {};
         }
@@ -17,14 +16,12 @@ namespace func_parser::pdb {
         }
 
         // If magic doesn't equal to pdb7 magic then sorry we cannot parse this pdb
-        // \todo: @es3n1n: add pdb2 support
-        //
+        // TODO: add pdb2 support
         if (std::memcmp(pdb_content.data(), detail::kMicrosoftPdb7Magic.data(), detail::kMicrosoftPdb7Magic.size()) != 0) {
             //FIXME_NO_ARG(1, "Only PDB7 is supported atm");
             return {};
         }
 
-        // We gamin
         function_list_t result = {};
 
         const detail::V7Parser parser(pdb_content.data(), pdb_content.size());

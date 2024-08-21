@@ -72,4 +72,4 @@ namespace func_parser::pdb::detail {
         // key is sym kind, values are ptrs to the symbols
         std::unordered_map<std::uint16_t, std::vector<memory::address>> dbi_symbols_ = {};
     };
-} // namespace func_parser::pdb::detail
+}
