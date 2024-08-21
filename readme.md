@@ -8,3 +8,10 @@ The BinBaffle is not just a piece of software, but a reflection of my commitment
 Learning is rarely a solitary endeavor and, true to this spirit, I am excited to share my progress. Each update to the project will include thorough documentation of the latest techniques I've worked on. This project doesn't just reflect my growth—it's a lifeline for any individual keen on navigating the depths of binary to binary obfuscation.
 
 So, whether you're a fellow recent graduate testing the waters, a seasoned professional after some fresh insights, or even a curious bystander with a keen interest in binary affiliations, I welcome you aboard the BinBaffle.
+
+## Resources and Inspirations
+
+- [Alcatraz](https://github.com/weak1337/Alcatraz)
+- [perses](https://github.com/mike1k/perses)
+- [Obfuscating native code for fun](https://blog.es3n1n.eu/posts/obfuscator-pt-1/)
+
